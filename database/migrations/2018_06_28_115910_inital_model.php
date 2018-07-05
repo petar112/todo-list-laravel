@@ -17,6 +17,7 @@ class InitalModel extends Migration
            $table->increments('id');
            $table->string("description");
            $table->boolean("completed");
+           $table->string("priority");
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class InitalModel extends Migration
      */
     public function down()
     {
-        Schema::drop('to_do_items');
+        Schema::dropIfExists('to_do_items');
     }
 }

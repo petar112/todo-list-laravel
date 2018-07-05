@@ -27,6 +27,7 @@ class ToDoListController extends Controller
         $toDoItem = new ToDoItem();
         $toDoItem->description = $request->description;
         $toDoItem->completed = $request->completed;
+        $toDoItem->priority = $request->priority;
         $toDoItem->save();
 
         return $toDoItem;
@@ -36,6 +37,7 @@ class ToDoListController extends Controller
         $toDoItem = ToDoItem::find($request->id);
         $toDoItem->description = $request->description;
         $toDoItem->completed = $request->completed;
+        $toDoItem->priority = $request->priority;
         $toDoItem->update();
 
         return $toDoItem;
