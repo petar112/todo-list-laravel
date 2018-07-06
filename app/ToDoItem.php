@@ -9,7 +9,7 @@ class ToDoItem extends Model
     protected $table = 'to_do_items';
 
     protected $fillable = [
-        'description', 'completed', 'priority'
+        'description', 'completed', 'priority', 'public'
     ];
     
     protected $hidden = [

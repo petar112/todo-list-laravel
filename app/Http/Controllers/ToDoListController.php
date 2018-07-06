@@ -28,6 +28,7 @@ class ToDoListController extends Controller
         $toDoItem->description = $request->description;
         $toDoItem->completed = $request->completed;
         $toDoItem->priority = $request->priority;
+        $toDoItem->public = $request->public;
         $toDoItem->save();
 
         return $toDoItem;
@@ -38,6 +39,7 @@ class ToDoListController extends Controller
         $toDoItem->description = $request->description;
         $toDoItem->completed = $request->completed;
         $toDoItem->priority = $request->priority;
+        $toDoItem->public = $request->public;
         $toDoItem->update();
 
         return $toDoItem;
